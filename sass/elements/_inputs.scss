@@ -1,0 +1,22 @@
+input[type="text"], input[type="tel"] {
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 140%;
+  padding-bottom: 7px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid $white;
+  color: $white;
+  width: 100%;
+  &::placeholder {
+    color: $white;
+  }
+  &.black {
+    color: $black;
+    border-color: $black;
+    &::placeholder {
+      color: $black;
+    }
+  }
+}

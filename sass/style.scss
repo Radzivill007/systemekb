@@ -1,0 +1,88 @@
+/* abstracts */
+@import "abstracts/breakpoints";
+@import "abstracts/fonts";
+@import "abstracts/colors";
+
+/* Components */
+
+@import "components/actual";
+@import "components/callback";
+@import "components/counts";
+@import "components/cycle";
+@import "components/demos";
+@import "components/footer";
+@import "components/header";
+@import "components/map";
+
+/* Pages */
+
+@import "pages/home/index";
+@import "pages/about/index";
+@import "pages/contacts/index";
+@import "pages/podderzhka/index";
+@import "pages/learn/index";
+
+/* Elements */
+@import "elements/buttons";
+@import "elements/products_cards";
+@import "elements/inputs";
+@import "elements/slick-slider";
+@import "elements/toggler";
+@import "elements/typography";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: $font__nutino;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: $black;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+ul {
+  & li {
+    list-style-type: none;
+  }
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  @include lg {
+    max-width: 912px;
+  }
+  @include md {
+    max-width: 688px;
+  }
+  @include sm {
+    max-width: 374px;
+  }
+  @include xs {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+}
+
+.rectangle {
+  background: url("assets/img/Rectangle-bg.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}

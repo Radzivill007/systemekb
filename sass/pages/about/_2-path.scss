@@ -1,0 +1,246 @@
+.path_block {
+  overflow: hidden;
+  margin-top: 55px;
+  margin-bottom: 100px;
+  & h2 {
+    position: relative;
+    z-index: 2;
+  }
+
+  & .slider-path {
+    margin: 0 -30px;
+    @include sm {
+      margin: 0;
+    }
+    & .cards {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      margin: 60px 30px 0 30px;
+      & .line {
+        position: relative;
+        height: 270px;
+        max-width: 970px;
+        margin: 0 auto;
+        transform: translateX(-10px);
+        flex-basis: 100%;
+        order: 3;
+        @include lg {
+          max-width: 675px;
+          transform: translateX(10px);
+        }
+        @include md {
+          max-width: 500px;
+          transform: translateX(-15px);
+        }
+        @include sm {
+          display: none;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 100%;
+          height: 2px;
+          background: $gradient-left;
+        }
+        & span {
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background: $gradient;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          &:nth-child(2) {
+            left: 233px;
+            @include lg {
+              left: 155px;
+            }
+            @include md {
+              left: 110px;
+            }
+          }
+          &:nth-child(3) {
+            left: 476px;
+            @include lg {
+              left: 328px;
+            }
+            @include md {
+              left: 241px;
+            }
+          }
+          &:nth-child(4) {
+            left: 720px;
+            @include lg {
+              left: 503px;
+            }
+            @include md {
+              left: 374px;
+            }
+          }
+          &:nth-child(5) {
+            right: -4px;
+          }
+        }
+      }
+      & .card {
+        display: flex;
+        flex-basis: 33%;
+        flex-grow: 1;
+        @include sm {
+          order: unset !important;
+          flex-basis: 100% !important;
+          padding: 0 !important;
+          &:not(:last-child) {
+            margin-bottom: 50px;
+          }
+          &.five .inner span {
+            display: none;
+          }
+        }
+        &.one {
+          order: 4;
+          justify-content: flex-start;
+        }
+        &.two {
+          order: 1;
+          flex-basis: 50%;
+          justify-content: flex-end;
+          padding-right: 100px;
+          @include lg {
+            padding-right: 50px;
+          }
+          @include md {
+            padding-right: 30px;
+          }
+        }
+        &.three {
+          order: 5;
+          justify-content: center;
+        }
+        &.four {
+          flex-basis: 50%;
+          justify-content: flex-start;
+          order: 2;
+          padding-left: 100px;
+          @include lg {
+            padding-left: 50px;
+          }
+          @include md {
+            padding-left: 30px;
+          }
+        }
+        &.five {
+          order: 6;
+          justify-content: flex-end;
+        }
+
+        & .inner {
+          width: 286px;
+          position: relative;
+          background: $white;
+          box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.1);
+          background-clip: padding-box;
+          border: 2px solid transparent;
+          border-radius: 20px;
+          padding: 24px 20px 30px 20px;
+          @include lg {
+            width: 249px;
+          }
+          @include md {
+            width: 204px;
+          }
+          @include sm {
+            width: 100%;
+          }
+          & span {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: $gradient-left;
+            left: 130px;
+            @include md {
+              left: 85px;
+            }
+            @include sm {
+              left: 50%;
+              top: unset !important;
+              bottom: -13px !important;
+              &:nth-child(2) {
+                bottom: -26px !important;
+              }
+              &:not(:nth-child(-n+2)) {
+                display: none;
+              }
+            }
+          }
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            margin: -2px;
+            border-radius: inherit;
+            background: $gradient;
+          }
+          &::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            position: absolute;
+            top: -15px;
+            right: 15px;
+            border-radius: 20px;
+            background: $gradient;
+          }
+          & .title {
+            position: relative;
+            left: -21px;
+            display: inline-block;
+            font-family: $font__manrope;
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 22px;
+            color: $white;
+            background: $gradient;
+            border-radius: 0 9px 9px 0;
+            padding: 8px 14px 8px 65px;
+            margin-bottom: 15px;
+
+            &::before {
+              content: "";
+              width: 30px;
+              height: 1px;
+              background: $white;
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              left: 20px;
+            }
+          }
+          & .text {
+            font-family: $font__manrope;
+            font-weight: 500;
+            font-size: 17px;
+            line-height: 23px;
+            color: #124873;
+            &:not(:last-child) {
+              margin-bottom: 16px;
+            }
+            @include md {
+              font-size: 12px;
+              line-height: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

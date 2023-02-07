@@ -1,0 +1,46 @@
+.solutions_block {
+  padding: 0 0 84px;
+  @include lg {
+    padding: 0 0 60px;
+  }
+  @include md {
+    padding: 0 0 50px;
+  }
+  & .inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 48px;
+    & > a {
+      flex: 0 0 607px;
+      @include lg {
+        flex: 0 0 443px;
+      }
+      @include md {
+        flex: 0 0 331px;
+      }
+      @include sm {
+        flex: 0 0 100%;
+      }
+      & .img {
+        & img {
+          border-radius: 15px;
+        }
+      }
+      & p {
+        font-family: $font__manrope;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 27px;
+        color: $black;
+        margin-top: 32px;
+        @include lg {
+          font-size: 18px;
+        }
+        @include md {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

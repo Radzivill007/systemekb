@@ -1,0 +1,54 @@
+.portal_sova {
+  padding: 0 0 69px;
+  & .inner {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    gap: 140px;
+    @include lg {
+      gap: 68px;
+      align-items: center;
+    }
+    & .desc {
+      & p {
+        font-family: $font__nutino;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 24px;
+        color: $black;
+        &:first-child {
+          margin-top: 27px;
+          margin-bottom: 19px;
+        }
+        &:last-child {
+          margin-bottom: 33px;
+          max-width: 490px;
+          @include md {
+            max-width: 343px;
+          }
+        }
+      }
+    }
+    & .btn {
+      width: 229px;
+    }
+    & .right {
+      flex-shrink: 0;
+      @include md {
+        position: absolute;
+        right: 0;
+        top: 154px;
+      }
+      & img {
+        width: 572px;
+        @include lg {
+          width: 381px;
+        }
+        @include md {
+          width: 298px;
+        }
+      }
+    }
+  }
+}

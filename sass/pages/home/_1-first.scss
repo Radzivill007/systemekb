@@ -1,0 +1,117 @@
+.home_first {
+  padding: 43px 0 186px;
+  position: relative;
+  &::before {
+    content: " ";
+    background-image: url("assets/img/svgs/vector-big.svg");
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    height: 693px;
+    width: 419px;
+    position: absolute;
+    right: 0;
+    top: -118px;
+    z-index: -1;
+    @include lg {
+      height: 650px;
+      width: 350px;
+    }
+    @include md {
+      height: 630px;
+      width: 270px;
+    }
+    @include sm {
+      height: 413px;
+      width: 97px;
+    }
+  }
+  & .inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    & .left {
+      max-width: 713px;
+      @include lg {
+        max-width: 453px;
+      }
+      @include md {
+        max-width: 353px;
+      }
+      & h1 {
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 76px;
+        letter-spacing: 0.02em;
+        @include lg {
+          font-size: 50px;
+          line-height: 65px;
+        }
+        @include md {
+          font-size: 40px;
+          line-height: 50px;
+        }
+      }
+      & > p {
+        font-family: $font__manrope;
+        font-weight: 600;
+        font-size: 21px;
+        line-height: 27px;
+        color: $gradient-left;
+        margin-bottom: 8px;
+        @include lg {
+          margin-bottom: 17px;
+        }
+      }
+      & .button_group {
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        @include md {
+          gap: 20px;
+        }
+        & .btn {
+          display: flex;
+          align-items: center;
+          width: 185px;
+          height: 40px;
+          & > img {
+            margin-right: 7px;
+          }
+        }
+        & > a {
+          display: flex;
+          align-items: center;
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 27px;
+          color: $black;
+          & > img {
+            margin-left: 13px;
+          }
+        }
+      }
+    }
+    & .right {
+      display: flex;
+      align-items: center;
+      max-width: 480px;
+      overflow: hidden;
+      & img {
+        max-width: 480px;
+      }
+      @include lg {
+        max-width: 414px;
+        & img {
+          max-width: 414px;
+        }
+      }
+      @include md {
+        max-width: 310px;
+        & img {
+          max-width: 310px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+.feedback_block {
+  max-width: 964px;
+  margin: 0 auto 92px;
+  @include lg {
+    max-width: 850px;
+  }
+  @include md {
+    max-width: 615px;
+  }
+  & .slider-feedback {
+    margin: 58px 0 0;
+    padding: 110px 85px;
+    border-radius: 43px;
+    background: $white;
+    @include lg {
+      padding: 80px 28px;
+    }
+    @include md {
+      padding: 45px 40px;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      margin: -15px;
+      border-radius: 60px;
+      background: $gradient;
+    }
+
+    & .slick-list {
+      overflow: hidden;
+    }
+    & .slider-prev {
+      left: -134px !important;
+      top: 50% !important;
+      transform: translateY(-50%) rotate(-180deg) !important;
+      @include lg {
+        left: -70px !important;
+      }
+    }
+    & .slider-next {
+      right: -134px !important;
+      top: 50% !important;
+      transform: translateY(-50%) !important;
+      @include lg {
+        right: -70px !important;
+      }
+    }
+  }
+}

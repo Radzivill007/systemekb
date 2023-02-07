@@ -1,0 +1,49 @@
+.slider-wrapper {
+  position: relative;
+  & .slick-slider {
+    overflow: hidden;
+    & .slick-track {
+      display: flex;
+    }
+    & .slick-arrow {
+      cursor: pointer;
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      right: 0px;
+      z-index: 1;
+      top: 44%;
+      transform: translateY(-50%);
+      background: $gradient;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+      border: 0;
+      border-radius: 50%;
+      &::before {
+        content: "";
+        background-image: url('assets/img/svgs/arrow-slider.svg');
+        width: 7px;
+        height: 12px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+      }
+      @include md {
+        top: 47%;
+        right: 20px;
+      }
+      @include sm {
+        display: none !important;
+      }
+    }
+    & .slider-prev {
+      right: unset;
+      left: 0px;
+      transform: translateY(-50%) rotate(-180deg);
+    }
+
+    .slick-disabled {
+      display: none !important;
+    }
+  }
+}

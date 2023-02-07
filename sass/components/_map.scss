@@ -1,0 +1,106 @@
+.map_component {
+  padding: 0 0 130px;
+  @include lg {
+    padding: 0 0 90px;
+  }
+  @include md {
+    padding: 0 0 80px;
+  }
+  & .map {
+    margin-top: 39px;
+    position: relative;
+  }
+  & .gerbs {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    & > div {
+      position: absolute;
+      & > img {
+        cursor: help;
+        @include lg {
+          width: 80%;
+        }
+        @include md {
+          width: 56%;
+        }
+      }
+      & .cities {
+        position: absolute;
+        z-index: 1;
+        top: 0%;
+        left: 80px;
+        &.left {
+          left: -207px;
+          & ul {
+            & .shadow {
+              right: -15px;
+              & svg {
+                left: unset;
+                right: -20px;
+                transform: scale(-1);
+                fill: $gradient-right;
+              }
+            }
+          }
+        }
+        & ul {
+          width: 164px;
+          padding: 15px 10px 15px 30px;
+          background: $white;
+          box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.1);
+          background-clip: padding-box;
+          border: 2px solid transparent;
+          border-radius: 20px;
+          &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            margin: -2px;
+            border-radius: inherit;
+            background: $gradient;
+          }
+          & .shadow {
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            position: absolute;
+            top: -15px;
+            right: 15px;
+            border-radius: 20px;
+            background: $gradient;
+            & svg {
+              width: 30px;
+              top: 12px;
+              position: absolute;
+              left: -20px;
+              fill: $gradient-left;
+            }
+          }
+          & li {
+            font-size: 13px;
+            line-height: 21px;
+            color: $black;
+            display: block;
+            position: relative;
+            &::before {
+              content: "";
+              position: absolute;
+              top: 8px;
+              left: -12px;
+              width: 5px;
+              height: 5px;
+              border-radius: 50%;
+              background: $black;
+            }
+          }
+        }
+      }
+    }
+  }
+}

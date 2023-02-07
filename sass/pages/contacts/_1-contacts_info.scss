@@ -1,0 +1,72 @@
+.contacts_info_block {
+  padding-bottom: 91px;
+  & .inner {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 46px;
+    & .item {
+      position: relative;
+      padding-left: 43px;
+
+      &:not(:last-child) {
+        margin-bottom: 27px;
+      }
+      & img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 25px;
+      }
+      & p,
+      & a {
+        font-family: $font__nutino;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+        color: $black;
+      }
+    }
+    & .left {
+      max-width: 343px;
+      margin-right: 140px;
+      flex-shrink: 0;
+      @include lg {
+        max-width: 234px;
+        margin-right: 128px;
+      }
+      @include md {
+        margin-right: 74px;
+      }
+      @include sm {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 27px;
+      }
+    }
+    & .center {
+      max-width: 380px;
+      margin-right: 87px;
+      flex-shrink: 0;
+      @include lg {
+        max-width: 281px;
+      }
+      @include md {
+        max-width: 380px;
+        margin-right: 0px;
+      }
+      @include sm {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 27px;
+      }
+    }
+    & .right {
+      @include md {
+        margin-top: 40px;
+      }
+      @include sm {
+        margin-top: 0px;
+      }
+    }
+  }
+}

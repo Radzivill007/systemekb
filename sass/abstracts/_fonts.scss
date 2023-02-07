@@ -1,0 +1,65 @@
+$font__manrope: 'manrope', sans-serif;
+$font__nutino: 'nutino', sans-serif;
+
+// manrope
+@font-face {
+	font-family: 'manrope';
+	src: url('fonts/manrope/manrope-light.otf');
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'manrope';
+	src: url('fonts/manrope/manrope-regular.otf');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'manrope';
+	src: url('fonts/manrope/manrope-medium.otf');
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'manrope';
+	src: url('fonts/manrope/manrope-semibold.otf');
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'manrope';
+	src: url('fonts/manrope/manrope-bold.otf');
+	font-weight: 700;
+	font-style: normal;
+}
+// nutino
+@font-face {
+	font-family: 'nutino';
+	src: url('fonts/nutino/nutino-light.ttf');
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'nutino';
+	src: url('fonts/nutino/nutino-regular.ttf');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'nutino';
+	src: url('fonts/nutino/nutino-medium.ttf');
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'nutino';
+	src: url('fonts/nutino/nutino-semibold.ttf');
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'nutino';
+	src: url('fonts/nutino/nutino-bold.ttf');
+	font-weight: 700;
+	font-style: normal;
+}

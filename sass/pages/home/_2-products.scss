@@ -1,0 +1,82 @@
+.products_block {
+  padding: 0 0 100px;
+  @include lg {
+    padding: 0 0 85px;
+  }
+  @include md {
+    padding: 0 0 70px;
+  }
+  & .inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 54px 0 42px;
+    & > .card {
+      flex: 0 0 395px;
+      height: 252px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      background: $white;
+      box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.12);
+      border-radius: 25px;
+      cursor: pointer;
+      @include lg {
+        flex: 0 0 290px;
+      }
+      @include md {
+        flex: 0 0 216px;
+        height: 207px;
+      }
+      @include sm {
+        flex: 0 0 100%;
+        height: unset;
+        padding-top: 22px;
+        &:not(:last-child) {
+          margin-bottom: 30px;
+        }
+      }
+      &:hover {
+        background: $gradient;
+        text-decoration: none;
+        & p {
+          color: $white;
+        }
+      }
+      & .img {
+        margin-bottom: 11px;
+        max-height: 130px;
+        @include md {
+          max-height: 105px;
+        }
+      }
+      & p {
+        display: flex;
+        align-items: center;
+
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 33px;
+        text-align: center;
+        color: $black;
+
+        height: 66px;
+        margin-bottom: 22px;
+        @include lg {
+          font-size: 21px;
+          line-height: 27px;
+        }
+        @include md {
+          height: 40px;
+          font-size: 14px;
+          line-height: 18px;
+        }
+      }
+    }
+  }
+  & .btn {
+    margin: 0 auto;
+    width: 274px;
+  }
+}

@@ -1,0 +1,114 @@
+.footer {
+  padding: 43px 0;
+  background: $gradient;
+  & .inner {
+    display: flex;
+    flex-wrap: wrap;
+
+    & p,
+    & a {
+      font-weight: 500;
+      font-size: 17px;
+      line-height: 23px;
+      color: $white;
+      @include lg {
+        font-size: 16px;
+      }
+    }
+    & .title {
+      text-transform: uppercase;
+    }
+    & ul {
+      & li:not(:last-child) {
+        margin-bottom: 10px;
+        @include lg {
+          margin-bottom: 7px;
+        }
+      }
+      & li.title {
+        margin-bottom: 15px;
+        @include lg {
+          margin-bottom: 12px;
+        }
+      }
+    }
+    & .first-col {
+      margin-right: 126px;
+      max-width: 226px;
+      @include lg {
+        margin-right: 46px;
+      }
+      & p,
+      & a {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 18px;
+      }
+      & .copyright {
+        margin: 24px 0 13px;
+      }
+      @include md {
+        margin-right: 35px;
+      }
+    }
+    & .second-col {
+      margin-right: 87px;
+      @include lg {
+        margin-right: 20px;
+      }
+      @include md {
+        margin-right: 48px;
+        & li:not(.title) {
+          display: none;
+        }
+      }
+      & .md-none {
+        display: none;
+        @include md {
+          display: block;
+        }
+      }
+    }
+    & .third-col {
+      margin-right: 147px;
+      @include lg {
+        margin-right: 42px;
+      }
+      @include md {
+        display: none;
+      }
+    }
+    & .four-col {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 16px;
+      & .town {
+        display: flex;
+        & img {
+          margin-right: 16px;
+        }
+      }
+      & .phone {
+        display: flex;
+        & img {
+          margin-right: 11px;
+        }
+      }
+      & .socials {
+        padding: 21px 0 33px;
+        display: flex;
+        gap: 22px;
+        & a:hover {
+          text-decoration: none;
+        }
+        @include md {
+          padding: 20px 0;
+        }
+      }
+      & .make {
+        font-size: 18px;
+      }
+    }
+  }
+}

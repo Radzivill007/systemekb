@@ -1,0 +1,62 @@
+.demos_component {
+  padding: 0 0 180px;
+  position: relative;
+  @include lg {
+    padding: 0 0 100px;
+  }
+  @include md {
+    padding: 0 0 90px;
+  }
+  &::before {
+    content: " ";
+    background-image: url("assets/img/svgs/vector-big.svg");
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    height: 774px;
+    width: 419px;
+    position: absolute;
+    right: 0;
+    top: -236px;
+    z-index: -1;
+    @include lg {
+      height: 650px;
+      width: 350px;
+    }
+    @include md {
+      height: 590px;
+      width: 270px;
+    }
+    @include sm {
+      height: 413px;
+      width: 97px;
+    }
+  }
+  & .inner {
+    display: flex;
+    & .left {
+      max-width: 500px;
+      margin-right: 120px;
+      @include lg {
+        max-width: 434px;
+        margin-right: 30px;
+      }
+      @include md {
+        max-width: 294px;
+        margin-right: 20px;
+      }
+      & .btn {
+        width: 251px;
+        margin-top: 40px;
+      }
+    }
+    & .right {
+      @include sm {
+        position: absolute;
+        max-width: 200px;
+        right: 20px;
+        z-index: -1;
+        top: -24px;
+      }
+    }
+  }
+}

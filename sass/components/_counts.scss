@@ -1,0 +1,61 @@
+.counts_component {
+  padding-bottom: 59px;
+  & .inner {
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding: 6px 0 24px;
+    display: flex;
+    flex-wrap: wrap;
+    & > div {
+      flex: 0 0 25%;
+      &:last-child {
+        padding-left: 71px;
+        @include lg {
+          padding-left: 37px;
+        }
+        @include md {
+          padding-left: 9px;
+        }
+      }
+      @include md {
+        &:nth-child(2) {
+          flex: 0 0 22%;
+        }
+        &:nth-child(3) {
+          flex: 0 0 28%;
+        }
+      }
+      @include sm {
+        flex: 0 0 100% !important;
+      }
+      & .number {
+        font-family: "Manrope";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 70px;
+        line-height: 96px;
+        @include lg {
+          font-size: 60px;
+          line-height: 80px;
+        }
+        @include md {
+          font-size: 50px;
+          line-height: 70px;
+        }
+      }
+      & p {
+        font-size: 18px;
+        line-height: 25px;
+        color: $black;
+        @include lg {
+          font-size: 14px;
+          line-height: 21px;
+        }
+        @include md {
+          font-size: 12px;
+          line-height: 17px;
+        }
+      }
+    }
+  }
+}

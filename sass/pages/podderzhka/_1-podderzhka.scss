@@ -1,0 +1,121 @@
+.podderzhka_page {
+  padding: 0 0 85px;
+  & .desc {
+    font-family: $font__nutino;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 24px;
+    color: $black;
+    max-width: 550px;
+    margin-top: 19px;
+    margin-bottom: 37px;
+  }
+  & .cards {
+    display: flex;
+    justify-content: flex-end;
+    gap: 45px;
+    @include sm {
+      flex-wrap: wrap;
+    }
+    & .card {
+      width: 47.6%;
+      position: relative;
+      padding: 25px 72px 47px 53px;
+      background: $white;
+      box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.1);
+      background-clip: padding-box;
+      border: 2px solid transparent;
+      border-radius: 20px;
+      @include lg {
+        width: 46.8%;
+        padding: 25px 20px 47px 30px;
+      }
+      @include md {
+        width: 46%;
+      }
+      @include sm {
+        width: 100%;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        margin: -2px;
+        border-radius: inherit;
+        background: $gradient;
+      }
+      &::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        position: absolute;
+        top: -15px;
+        right: 15px;
+        border-radius: 20px;
+        background: $gradient;
+      }
+      & .title {
+        position: relative;
+        left: -67px;
+        display: inline-block;
+        font-family: $font__manrope;
+        font-weight: 700;
+        font-size: 21px;
+        line-height: 22px;
+        color: $white;
+        background: $gradient;
+        border-radius: 0 9px 9px 0;
+        padding: 12px 23px 11px 70px;
+        margin-bottom: 25px;
+        white-space: nowrap;
+        @include lg {
+          left: -43px;
+          font-size: 19px;
+        }
+        @include md {
+          padding: 12px 23px 11px 43px;
+          font-size: 17px;
+        }
+      
+      }
+      & form {
+        display: flex;
+        align-items: flex-end;
+        gap: 36px;
+        @include md {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        & .input {
+          max-width: 167px;
+          & label {
+            display: block;
+            font-family: $font__nutino;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 28px;
+            color: #575757;
+            margin-bottom: 16px;
+          }
+        }
+        & .btn {
+          flex-shrink: 0;
+          width: 256px;
+          @include lg {
+            width: 166px;
+          }
+          @include md {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
